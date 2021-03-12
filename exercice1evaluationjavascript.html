@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercice 1 - Calcul du nombre de jeunes, de moyens et de vieux</title>
+</head>
+
+<body>
+    <script>
+        jeune = 0
+        moyen = 0
+        vieux = 1
+        var age = window.prompt('Tapez un âge, ou tapez "100" ou un autre nombre centenaire pour arrêter la saisie:');
+        console.log("L'utilisateur a tapé " + age);
+        while (age < 100) {
+
+            if (age < 20) {
+                jeune++;
+            }
+            if (age >= 20 && age <= 40) {
+                moyen++;
+            }
+            if (age > 40 && age <= 100) {
+                vieux++;
+            }
+            var age = window.prompt('Tapez un âge, ou tapez "100" ou un autre nombre centenaire pour arrêter la saisie:');
+            console.log("L'utilisateur a tapé " + age);
+        }
+        alert("Il y a " + jeune + " personnes qui sont âgées de moins de 20 ans, " + moyen + " qui sont âgées de 20 à 40 ans, et " + vieux + " qui sont âgées de plus de 40ans. ");
+        console.log("Il y a " + jeune + " personnes qui sont âgées de moins de 20 ans, " + moyen + " qui sont âgées de 20 à 40 ans, et " + vieux + " qui sont âgées de plus de 40ans. ");
+
+
+
+        // /^[0-9]+$/
+        // moyenne = 0
+        // nombre = 0
+        // somme = 0
+        // var tab = ["", ]
+        // var i = window.prompt("Ecrivez des chiffres, pour terminer la saisie, tapez 0");
+        // console.log("L'utilisateur a tapé " + i);
+        // while (i != "0") {
+        //     nombre++;
+        //     tab = tab + " " + i;
+        //     somme = parseInt(somme) + parseInt(i);
+        //     var i = window.prompt("Ecrivez des chiffres, pour terminer la saisie, tapez 0");
+        //     console.log("L'utilisateur a tapé " + i);
+        // }
+
+        // moyenne = somme / nombre;
+
+        // console.log(tab + "\nNombre de notes: " + nombre + "\nMoyenne: " + moyenne + "\nSomme: " + somme);
+        // alert(tab + "\nNombre de notes: " + nombre + "\nMoyenne: " + moyenne + "\nSomme: " + somme);
+    </script>
+</body>
+
+</html>

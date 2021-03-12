@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercice 3: recherche d'un pr&eacute;nom</title>
+</head>
+
+<body>
+    <script>
+        // function arrayUnset(array, value) {
+        //     array.splice(array.indexOf(value), 1);
+        // }
+
+        // var myArray = new Array('un', 'six', 'neuf');
+        // var nom = window.prompt("Saisissez un chiffre");
+        // // myArray = un, six, neuf; 
+        // console.log(myArray)
+        //     // supprimer l'élément "six":
+        // arrayUnset(myArray, nom);
+        // console.log(myArray);
+        // // désormais myArray = un, neuf; 
+
+
+        function arrayUnset(array, value) {
+            array.splice(array.indexOf(value), 1);
+            array.push(' ');
+        }
+        var tab = new Array("Audrey", "Aurélien", "Flavien", "Jérémy", "Laurent", "Melik", "Nouara", "Salem", "Samuel", "Stéphane");
+        console.log(tab)
+        var nom = window.prompt("Entrez un prénom :");
+
+
+        if (tab.indexOf(nom) != -1) {
+            arrayUnset(tab, nom);
+            alert("Tapez sur la touche F12 pour voir le résultat");
+            console.log(tab);
+            console.log("Le prénom " + nom + " a été enlevé du tableau.");
+        } else {
+            alert("Vous n'avez pas tapé un prénom valide");
+            console.log(tab)
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercice 4: total d'une commande</title>
+</head>
+
+<body>
+    <script>
+        // PU = Prix unitaire
+        // QTECOM = quantité commandée
+        // PAP = prix à payer 
+        // REM = remise 
+        // PORT = frais de port 
+        // TOT = total ? (prix unitaire x quantité demandée)
+        var TOT1 = 0;
+        var REM = 0;
+        var TOT2 = 0;
+        var PORT = 0;
+
+        function remise(nombre1, nombre2, pourcent) {
+            if (nombre1 >= 0 && nombre1 < 100) {
+                nombre2 = nombre1;
+                pourcent = 0;
+            }
+            if (nombre1 >= 100 && nombre1 <= 200) {
+                pourcent = nombre1 * 0.05;
+                nombre2 = nombre1 - pourcent;
+            }
+            if (nombre1 > 200) {
+                pourcent = nombre1 * 0.10;
+                nombre2 = nombre1 - pourcent;
+            }
+        }
+
+        function fraisPort(nombreA, nombreB, pourCent) {
+            if (nombreA <= 300) {
+                nombreB = nombreA + parseInt(6);
+            }
+            if (nombreA > 300 && nombreA <= 500) {
+                pourCent = nombreA * 0.02;
+                nombreB = nombreA + pourCent;
+            }
+            if (nombreA > 500) {
+                nombreB = nombreA;
+            }
+        }
+        var PU = window.prompt("Saisissez le prix unitaire du produit:");
+        console.log("L'utilisateur a tapé le prix unitaire de " + PU + " €");
+        var QTECOM = window.prompt("Saisissez la quantité du produit que vous souhaitez commander:");
+        console.log("L'utilisateur souhaite commander une quantité de" + QTECOM);
+        TOT = (PU * QTECOM);
+        // var TOT1;
+        // var REM;
+        // var TOT2;
+        // var PORT;
+        remise(TOT, TOT1, REM);
+        fraisPort(TOT1, TOT2, PORT);
+        alert("Prix total: " + TOT2 + "\nRemise: " + REM + "\nFrais de port: " + PORT);
+        console.log("Prix total: " + TOT2 + "\nRemise: " + REM + "\nFrais de port: " + PORT);
+
+
+
+
+        // si entre 0 et 99: remise 0,   - - remisé frais de port 2%, 6 mini
+        // si entre 100 et 200 remise 5 %,  - - remisé frais de port 2 % 6 mini
+        // à partir de 300 remisé les 2% du frais de port s'applique
+        // si entre 201 et 500 remise 10 %, - - remisé frais de port 2%
+        // si entre 501 et plus remise 10%, - - remisé frais de port gratuit
+    </script>
+</body>
+
+</html>

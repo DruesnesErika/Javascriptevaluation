@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercice 2 : Table de multiplication</title>
+</head>
+
+<body>
+
+
+    <script>
+        var i = 0;
+        var nombre1 = window.prompt("Vous voulez afficher la table de multiplication de quelle nombre?");
+        console.log(" L'utilisateur a choisi le nombre " + nombre1 + " à multiplier");
+
+
+
+        function tableMultiplication(a, b) {
+            c = a * b;
+            return c
+        }
+
+        while (i <= 10) {
+            resultat = tableMultiplication(nombre1, i);
+            console.log(nombre1 + " x " + i + " = " + resultat);
+            i++;
+        }
+        alert("Tapez sur la touche F12 pour afficher les résultats.")
+            // alert(nombre1 + " x " + 0 + " = " + tableMultiplication(nombre1, 0) + "\n" +
+            //     nombre1 + " x " + 1 + " = " + tableMultiplication(nombre1, 1) + "\n" +
+            //     nombre1 + " x " + 2 + " = " + tableMultiplication(nombre1, 2) + "\n" +
+            //     nombre1 + " x " + 3 + " = " + tableMultiplication(nombre1, 3) + "\n" +
+            //     nombre1 + " x " + 4 + " = " + tableMultiplication(nombre1, 4) + "\n" +
+            //     nombre1 + " x " + 5 + " = " + tableMultiplication(nombre1, 5) + "\n" +
+            //     nombre1 + " x " + 6 + " = " + tableMultiplication(nombre1, 6) + "\n" +
+            //     nombre1 + " x " + 7 + " = " + tableMultiplication(nombre1, 7) + "\n" +
+            //     nombre1 + " x " + 8 + " = " + tableMultiplication(nombre1, 8) + "\n" +
+            //     nombre1 + " x " + 9 + " = " + tableMultiplication(nombre1, 9) + "\n" +
+            //     nombre1 + " x " + 10 + " = " + tableMultiplication(nombre1, 10) + "\n");
+
+        // console.log(nombre1 + " x " + 0 + " = " + tableMultiplication(nombre1, 0) + "\n" +
+        //     nombre1 + " x " + 1 + " = " + tableMultiplication(nombre1, 1) + "\n" +
+        //     nombre1 + " x " + 2 + " = " + tableMultiplication(nombre1, 2) + "\n" +
+        //     nombre1 + " x " + 3 + " = " + tableMultiplication(nombre1, 3) + "\n" +
+        //     nombre1 + " x " + 4 + " = " + tableMultiplication(nombre1, 4) + "\n" +
+        //     nombre1 + " x " + 5 + " = " + tableMultiplication(nombre1, 5) + "\n" +
+        //     nombre1 + " x " + 6 + " = " + tableMultiplication(nombre1, 6) + "\n" +
+        //     nombre1 + " x " + 7 + " = " + tableMultiplication(nombre1, 7) + "\n" +
+        //     nombre1 + " x " + 8 + " = " + tableMultiplication(nombre1, 8) + "\n" +
+        //     nombre1 + " x " + 9 + " = " + tableMultiplication(nombre1, 9) + "\n" +
+        //     nombre1 + " x " + 10 + " = " + tableMultiplication(nombre1, 10) + "\n");
+
+
+        //  Multiples
+        // var x = window.prompt("Saisissez un nombre entier");
+        // var nn = window.prompt("Vous voulez le multiplier jusque combien?");
+        // multiple = 0
+        // while (multiple < nn) {
+        //     multiple++;
+        //     fin = x * multiple;
+        //     alert(x + " x " + multiple + " = " + fin)
+        // }
+    </script>
+</body>
+
+</html>
