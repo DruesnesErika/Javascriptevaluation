@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="Jarditou" content="Jarditou" />
+    <title>Jarditou</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+</head>
+
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8">
+                <img src="images/jarditou_logo.jpg" class=img-fluid alt="Logo Jarditou" title="Logo Jarditou" width="200px">
+            </div>
+            <div class="col-lg-4 ">
+                <p class="fs-2 text-center">Tout le jardin</p>
+            </div>
+        </div>
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <a class="navbar-brand" href="#">Jarditou.com</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                  </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Accueil</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="tableau.html">Tableau</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="contact.html">Contact</a>
+                    </li>
+                </ul>
+                <form class="d-flex">
+                    <input class="form-control me-2" type="search" placeholder="Votre promotion" aria-label="Votre promotion">
+                    <button class="btn btn-outline-success" type="submit">Recherche</button>
+                </form>
+            </div>
+        </nav>
+        <img src="images/promotion.jpg" class=img-fluid alt="Promotion" title="Promotion" width="100%">
+        <p>*Ces zones sont obligatoires</p>
+        <form action="#" method="POST">
+            <legend class="h2">Vos coordonn&eacute;es</legend>
+            <form class="row g-3">
+                <label for="nom">Nom*</label><input type="text" class="form-control" name="nom" id="nom" placeholder="Veuillez saisir votre nom" required title="Entrez votre nom (que des caractères entre a et z)"><span id="missNom"></span><br>
+                <label for="prenom">Pr&eacute;nom*</label><input type="text" class="form-control" name="prenom" id="prenom" placeholder="Veuillez saisir votre pr&eacute;nom" required title="Entrez votre pr&eacute;nom (que des caractères entre a et z)"><span id="missPrenom"></span><br>
+                <p>Sexe*</p>
+                <input id="feminin" type="radio" name="sexe" value="Feminin" class="form-check-input"> F&eacute;minin
+                <input id="masculin" type="radio" name="sexe" value="Masculin" class="form-check-input"> Masculin
+                <input id="neutre" type="radio" name="sexe" value="Neutre" class="form-check-input"> Neutre
+                <br><span id="missSexe"></span><br>
+                <label for="date">Date de Naissance*</label><input type="date" class="form-control" name="ddn" id="date" required title="Entrez votre date de naissance"><span id="missDate"></span><br>
+                <label for="codepostal">Code postal*</label><input type="text" class="form-control" name="codepostal" id="codepostal" required title="Entrez votre code postal"><span id="missCodepostal"></span><br>
+                <label for="adresse">Adresse</label><input type="text" class="form-control" name="adresse" id="adresse"><br>
+                <label for="ville">Ville</label><input type="text" class="form-control" name="ville" id="ville"><br>
+                <label for="email">Email*</label><input type="text" class="form-control" name="email" id="email" placeholder="dave.loper@afpa.fr" required title="Entrez votre adresse email"><span id="missEmail"></span>
+            </form>
+            <br>
+            <legend class="h2">Votre demande</legend>
+            <p>Sujet*</p>
+            <select class="form-select"  id=selector aria-label="Default select example">
+            <option disabled selected>Veuillez sélectionner un sujet</option>
+            <option value="commande">Mes commandes</option>
+            <option value="question">Question sur un produit</option>
+            <option value="reclamation">R&eacute;clamation</option>
+            <option value="autres">Autres</option>
+          </select><span id="missSelector"></span>
+            <br>
+            <p>Votre question*:</p>
+            <div class="form-floating">
+                <textarea class="form-control" placeholder="Leave a comment here" id="floatingTextarea2" style="height: 100px"></textarea>
+            </div><span id="missFloatingTextarea2"></span>
+            <br>
+            <input type="checkbox" id=checkbox value="J'accepte le traitement informatique de ce formulaire." required title="Cochez cette case pour continuer"> *J'accepte le traitement informatique de ce formulaire
+            <br><span id="missCheckbox"></span><br>
+            <input type="submit" class="btn btn-dark" href="#" id=boutonenvoi value="Envoyer">
+            <input type="reset" class="btn btn-dark" href="#" value="Annuler">
+        </form>
+        <br>
+        <br>
+        <footer>
+            <ul class="nav bg-dark" style="margin:auto">
+                <li class="nav-item text-muted">
+                    <a class="nav-link text-reset" href="#">mention légales</a>
+                </li>
+                <li class="nav-item text-muted">
+                    <a class="nav-link text-reset" href="#">horaires</a>
+                </li>
+                <li class="nav-item text-muted">
+                    <a class="nav-link text-reset" href="#">plan du site</a>
+                </li>
+            </ul>
+        </footer>
+    </div>
+    <script type=" text/javascript " src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js%22%3E "></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.6.0/dist/umd/popper.min.js " integrity="sha384-KsvD1yqQ1/1+IA7gi3P0tyJcT3vR+NdBTt13hSJ2lnve8agRGXTTyNaBYmCR/Nwi " crossorigin="anonymous "></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.min.js " integrity="sha384-nsg8ua9HAw1y0W1btsyWgBklPnCUAFLuTMS2G72MMONqmOymq585AcH49TLBQObG " crossorigin="anonymous "></script>
+    <script src="jarditoucontact.js"></script>
+</body>
+
+</html>
