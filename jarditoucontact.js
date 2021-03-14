@@ -1,8 +1,4 @@
-
-// -rendre obligatoire le Sexe obligatoire + afficher code erreur en dessous 
-
-
-
+ 
 // -rendre obligatoire sujet + code erreur en dessous
 // -rendre obligatoire question + code erreur en dessous 
 // -bouton annuler reset 
@@ -90,18 +86,20 @@ function validation(event) {
     //     missSelector.textContent = "Sujet manquant, veuillez sélectionnez un sujet";
     //     missSelector.style.color = "red";
     // }
-    if (TextareaContenu != "") {
+    if (TextareaContenu == '') {
         event.preventDefault();
         missFloatingTextarea2.textContent = "Question manquante, posez votre question ici";
         missFloatingTextarea2.style.color = "red";
-        return false;
+        
     }
     if (checkbox.validity.valueMissing) {
         event.preventDefault();
         missCheckbox.textContent = "Cochez cette case pour valider le formulaire";
         missCheckbox.style.color = "red";
+        
     } else {
     alert("Formulaire envoyé!");
+    missFloatingTextarea2.style.display = "none";
     // console.log("Nom: " + nom.value + "\nPrénom: " + prenom.value + "\nSexe: " + sexeChoosen + "\nDate de naissance: " + date.value + "\nCode Postal: " + codepostal.value + "\nAdresse: " + adresse.value + "\nVille: " + ville.value + "\nEmail: " + email.value + "\nSujet: \nQuestion: ");
     }
 }
