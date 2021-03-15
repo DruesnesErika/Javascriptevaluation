@@ -10,29 +10,17 @@
 
 <body>
     <script>
-        // function arrayUnset(array, value) {
-        //     array.splice(array.indexOf(value), 1);
-        // }
+        var tab = new Array("Audrey", "Aurélien", "Flavien", "Jérémy", "Laurent", "Melik", "Nouara", "Salem", "Samuel", "Stéphane");
+        var tabInitial = [...tab]
 
-        // var myArray = new Array('un', 'six', 'neuf');
-        // var nom = window.prompt("Saisissez un chiffre");
-        // // myArray = un, six, neuf; 
-        // console.log(myArray)
-        //     // supprimer l'élément "six":
-        // arrayUnset(myArray, nom);
-        // console.log(myArray);
-        // // désormais myArray = un, neuf; 
+        console.log(tabInitial);
+        var nom = window.prompt("Entrez un prénom parmi cette liste (" + tabInitial + "):");
 
 
         function arrayUnset(array, value) {
             array.splice(array.indexOf(value), 1);
             array.push(' ');
         }
-        var tab = new Array("Audrey", "Aurélien", "Flavien", "Jérémy", "Laurent", "Melik", "Nouara", "Salem", "Samuel", "Stéphane");
-        console.log(tab)
-        var nom = window.prompt("Entrez un prénom :");
-
-
         if (tab.indexOf(nom) != -1) {
             arrayUnset(tab, nom);
             alert("Tapez sur la touche F12 pour voir le résultat");

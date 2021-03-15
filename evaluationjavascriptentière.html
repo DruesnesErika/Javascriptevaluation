@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Evaluation Javascript</title>
+</head>
+
+<body>
+    <form action="#" method="POST">
+        <p>Cliquez sur le bouton ci-dessous pour voir l'exercice 1 - Calcul du nombre de jeunes, de moyens et de vieux:</p><input type="button" class="btn btn-dark" id=boutonenvoi1 value="Exercice 1">
+        <p>Cliquez sur le bouton ci-dessous pour voir l'exercice 2 - Table de multiplication:</p><input type="button" class="btn btn-dark" id=boutonenvoi2 value="Exercice 2">
+        <p>Cliquez sur le bouton ci-dessous pour voir l'exercice 3 - Recherche d'un pr&eacute;nom:</p><input type="button" class="btn btn-dark" id=boutonenvoi3 value="Exercice 3">
+        <p>Cliquez sur le bouton ci-dessous pour voir l'exercice 4 - Total d'une commande:</p><input type="button" class="btn btn-dark" id=boutonenvoi4 value="Exercice 4">
+        <p>Cliquez sur le bouton ci-dessous pour voir l'exercice 5 - V&eacute;rification d'un formulaire:</p><input type="button" class="btn btn-dark" id=boutonenvoi5 value="Exercice 5">
+    </form>
+
+    <script>
+        var formValid1 = document.getElementById("boutonenvoi1");
+        formValid1.addEventListener("click", validation1);
+
+        function validation1(event) {
+            window.open("exercice1evaluationjavascript.html");
+        }
+        var formValid2 = document.getElementById("boutonenvoi2");
+        formValid2.addEventListener("click", validation2);
+
+        function validation2(event) {
+            window.open("exercice2evaluationjavascript.html");
+        }
+        var formValid3 = document.getElementById("boutonenvoi3");
+        formValid3.addEventListener("click", validation3);
+
+        function validation3(event) {
+            window.open("exercice3evaluationjavascript.html");
+        }
+        var formValid4 = document.getElementById("boutonenvoi4");
+        formValid4.addEventListener("click", validation4);
+
+        function validation4(event) {
+            window.open("exercice4evaluationjavascript.html");
+        }
+        var formValid5 = document.getElementById("boutonenvoi5");
+        formValid5.addEventListener("click", validation5);
+
+        function validation5(event) {
+            window.open("contact.html");
+        }
+    </script>
+</body>
+
+</html>
